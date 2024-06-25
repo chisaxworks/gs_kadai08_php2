@@ -12,7 +12,7 @@ $note = $_POST["note"];
 //2. PHPからDB接続します
 try {
     //ID:'root', Password: xamppは 空白 ''
-    $pdo = new PDO('mysql:dbname=gs_kadai_php;charset=utf8;host=localhost','root','');
+    $pdo = new PDO('mysql:dbname=chisaxworks_gs_kadai_php;charset=utf8;host=mysql635.db.sakura.ne.jp','chisaxworks','gs_kadai08_php2');
   } catch (PDOException $e) {
     exit('DBConnectError:'.$e->getMessage());
   }
