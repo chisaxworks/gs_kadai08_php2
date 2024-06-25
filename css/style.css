@@ -1,0 +1,153 @@
+body {
+    font-family: "Kiwi Maru", "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+header {
+    color: #ffffff;
+    background-color: #97d4d9;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.inner {
+    max-width: 1050px;
+    padding: 30px 25px 50px;
+    margin: 0 auto;
+}
+
+footer {
+    color: #ffffff;
+    background-color: #97d4d9;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.copyright {
+    font-size: 10px;
+}
+
+/* フォント */
+
+h1 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+p.sname {
+    font-weight: 500;
+}
+
+/* 入力エリア */
+
+.input_wrap h2 {
+    text-align: center;
+    margin: 0px auto 20px;
+}
+
+.inputarea {
+    border: 1px solid #333333;
+    border-radius: 5px;
+    background-color: #ffffff;
+    width: 300px;
+    height: 40px;
+    padding: 0 10px;
+}
+
+select.inputarea {
+    appearance: auto;
+}
+
+.input_form {
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.input_item {
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.submit_btn {
+    text-align: center;
+    border-radius: 10px;
+    color: #ffffff;
+    background-color: #97d4d9;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 50px;
+}
+
+.submit_btn:hover {
+    opacity: 0.8;
+}
+
+
+/* 表示エリア */
+.display_wrap h2{
+    text-align: center;
+    margin: 50px auto 30px;
+}
+
+.item_wrap {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.item {
+    background-color: #97d4d9;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    width: 45%;
+}
+
+.item:hover {
+    opacity: 0.8;
+}
+
+/* 確認画面 */
+.write_wrap h2 {
+    text-align: center;
+    margin: 0 auto 20px;
+}
+
+.back_btn {
+    display: block;
+    width: fit-content;
+    margin: 30px auto 0;
+    padding: 10px 50px;
+    border-radius: 10px;
+    background-color: #97d4d9;
+    color: #ffffff;
+}
+
+.back_btn:hover {
+    opacity: 0.8;
+}
+
+/* --------------------
+    for SP size 
+-------------------- */
+@media screen and (max-width: 768px){
+
+    h1 {
+        font-size: 21px;
+    }
+
+}
