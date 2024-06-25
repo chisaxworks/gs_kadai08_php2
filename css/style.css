@@ -55,12 +55,15 @@ p.sname {
 /* 入力エリア */
 .add_btn {
     color: #222222;
-    padding: 0 10px;
-    background-color: #eeeeee;
+    background-color: #e5f4f5;
     position: absolute;
     right: 20px;
     top: 10px;
-    border-radius: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
 }
 
 .input_wrap {
