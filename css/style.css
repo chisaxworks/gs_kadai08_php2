@@ -2,6 +2,7 @@ body {
     font-family: "Kiwi Maru", "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
     background-color: #ffffff;
     color: #333333;
+    overflow-y: scroll;
 }
 
 header {
