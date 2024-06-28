@@ -13,3 +13,11 @@ $('.add_btn').click(function () {
     };
 
 });
+
+//色選択した時の動作
+$(".color").on("click", function () {
+
+    //選択したもの以外は半透明にする
+    $('.color').css('opacity', '0.6');
+    $(this).css('opacity', '1.0');
+});
