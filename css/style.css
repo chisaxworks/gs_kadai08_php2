@@ -44,17 +44,22 @@ h1 {
 }
 
 h2 {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 500;
 }
 
 p.sname {
+    font-size: 18px;
     font-weight: 500;
+}
+
+p.normal {
+    font-size: 14px;
 }
 
 /* 入力エリア */
 .add_btn {
-    color: #222222;
+    color: #333333;
     background-color: #e5f4f5;
     position: absolute;
     right: 20px;
@@ -136,12 +141,27 @@ select.inputarea {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    row-gap: 5px;
-    width: 45%;
+    row-gap: 10px;
+    width: 320px;
+    height: 160px;
 }
 
 .item:hover {
     opacity: 0.8;
+}
+
+.icon_wrap{
+    display: flex;
+    column-gap: 5px;
+    margin-top: 5px;
+}
+
+.paytype, .mailtype {
+    color: #333333;
+    background-color: #e5f4f5;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 5px 10px;
 }
 
 /* 確認画面 */

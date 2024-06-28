@@ -27,8 +27,14 @@ if ($status==false) {
         $view .= '<p class="sname">';
         $view .= $result['sname'];
         $view .= '</p>';
-        $view .= '<p>';
+        $view .= '<p class="normal">';
         $view .= $result['plan'];
+        $view .= '</p>';
+        $view .= '<div class="icon_wrap"><div class="paytype">';
+        $view .= $result['payment'];
+        $view .= '</div></div>';
+        $view .= '<p class="normal">';
+        $view .= $result['note'];
         $view .= '</p>';
         $view .= '</a>';
     }
