@@ -1,6 +1,12 @@
 <?php
 // OGP用情報取得関数
-function getOgpImg($url) {
+function getOgpImg($url, $cache) {
+    // キャッシュを確認
+    if (isset($cache[$url])) {
+
+        return $cache[$url];
+    }
+
     // URLからHTMLを取得
     $html = file_get_contents($url);
     if ($html === false) {
@@ -12,15 +18,22 @@ function getOgpImg($url) {
     @$doc->loadHTML($html);
     
     $metaTags = $doc->getElementsByTagName('meta');
+    $ogpImg = '';
     foreach ($metaTags as $meta) {
         if ($meta->getAttribute('property') == 'og:image') {
             $ogpImg = $meta->getAttribute('content');
+            break;
         }
     }
+
+    // キャッシュに保存
+    $cache[$url] = $ogpImg;
     
     return $ogpImg;
 }
 
+// キャッシュの初期化
+$ogpCache = [];
 
 //1.  DB接続します
 try {
@@ -46,7 +59,7 @@ if ($status==false) {
     while( $result = $stmt->fetch(PDO::FETCH_ASSOC)){
 
         $url = $result['url'];
-        $ogpImg = getOgpImg($url);
+        $ogpImg = getOgpImg($url, $ogpCache);
 
         $view .= '<div class="item ';
         $view .= $result['color'];
@@ -55,7 +68,7 @@ if ($status==false) {
         $view .= $result['sname'];
         $view .= '</p>';
         $view .= '<img class="ogpImg" src="';
-        $view .= getOgpImg($url);
+        $view .= $ogpImg;
         $view .= '" alt="">';
         $view .= '<div class="details"><p><span>プラン</span>';
         $view .= $result['plan'];
