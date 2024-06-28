@@ -31,6 +31,23 @@
             <label for="note">補足</label>
             <input type="text" name="note" id="note" class="inputarea">
         </div>
+        <div class="input_item testradio">
+            <div>色選択</div>
+            <div class="colors">
+                <input type="radio" name="color" id="pink" value="pink">
+                <label for="pink"><span class="color pink"></span></label>
+                <input type="radio" name="color" id="yellow" value="yellow">
+                <label for="yellow"><span class="color yellow"></span></label>
+                <input type="radio" name="color" id="green" value="green">
+                <label for="green"><span class="color green"></span></label>
+                <input type="radio" name="color" id="blue" value="blue">
+                <label for="blue"><span class="color blue"></span></label>
+                <input type="radio" name="color" id="purple" value="purple">
+                <label for="purple"><span class="color purple"></span></label>
+                <input type="radio" name="color" id="gray" value="gray">
+                <label for="gray"><span class="color gray"></span></label>
+            </div>
+        </div>
         <div>
             <input type="submit" value="登録" class="submit_btn">
         </div>

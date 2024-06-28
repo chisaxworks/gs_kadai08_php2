@@ -21,7 +21,9 @@ if ($status==false) {
 }else{
     //whileで1件ずつ取得
     while( $result = $stmt->fetch(PDO::FETCH_ASSOC)){
-        $view .= '<a class="item" target="_blank" href="';
+        $view .= '<a class="item ';
+        $view .= $result['color'];
+        $view .= '" target="_blank" href="';
         $view .= $result['url'];
         $view .= '">';
         $view .= '<p class="sname">';
@@ -32,6 +34,8 @@ if ($status==false) {
         $view .= '</p>';
         $view .= '<div class="icon_wrap"><div class="paytype">';
         $view .= $result['payment'];
+        $view .= '</div><div class="mailtype">';
+        $view .= $result['mail'];
         $view .= '</div></div>';
         $view .= '<p class="normal">';
         $view .= $result['note'];

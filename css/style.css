@@ -1,13 +1,13 @@
 body {
     font-family: "Kiwi Maru", "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
-    background-color: #ffffff;
+    background-color: #eeeeee;
     color: #333333;
     overflow-y: scroll;
 }
 
 header {
     color: #ffffff;
-    background-color: #97d4d9;
+    background-color: #888888;
     height: 50px;
     line-height: 50px;
     text-align: center;
@@ -26,7 +26,7 @@ header {
 
 footer {
     color: #ffffff;
-    background-color: #97d4d9;
+    background-color: #888888;
     height: 30px;
     line-height: 30px;
     text-align: center;
@@ -59,8 +59,8 @@ p.normal {
 
 /* 入力エリア */
 .add_btn {
-    color: #333333;
-    background-color: #e5f4f5;
+    background-color: #333333;
+    color: #ffffff;
     position: absolute;
     right: 20px;
     top: 10px;
@@ -69,6 +69,10 @@ p.normal {
     width: 80px;
     height: 80px;
     line-height: 80px;
+}
+
+.add_btn:hover {
+    color: #fdcb6e;
 }
 
 .input_wrap {
@@ -82,7 +86,7 @@ p.normal {
 }
 
 .inputarea {
-    border: 1px solid #333333;
+    border: 1px solid #2d3436;
     border-radius: 5px;
     background-color: #ffffff;
     width: 300px;
@@ -111,16 +115,11 @@ select.inputarea {
     text-align: center;
     border-radius: 10px;
     color: #ffffff;
-    background-color: #97d4d9;
+    background-color: #888888;
     display: block;
     margin: 20px auto;
     padding: 10px 50px;
 }
-
-.submit_btn:hover {
-    opacity: 0.8;
-}
-
 
 /* 表示エリア */
 .display_wrap h2{
@@ -136,7 +135,7 @@ select.inputarea {
 }
 
 .item {
-    background-color: #97d4d9;
+    background-color: #888888;
     border-radius: 10px;
     padding: 20px;
     display: flex;
@@ -144,30 +143,56 @@ select.inputarea {
     row-gap: 10px;
     width: 320px;
     height: 160px;
+    color: #ffffff;
+
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.item:hover {
-    opacity: 0.8;
+.sname {
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: 10px;
 }
 
 .icon_wrap{
     display: flex;
     column-gap: 5px;
-    margin-top: 5px;
 }
 
 .paytype, .mailtype {
     color: #333333;
-    background-color: #e5f4f5;
+    background-color: #eeeeee;
     font-size: 12px;
     border-radius: 5px;
     padding: 5px 10px;
 }
 
 /* 確認画面 */
-.write_wrap h2 {
+.reg_wrap h2 {
     text-align: center;
     margin: 0 auto 20px;
+}
+
+.reg {
+    border-radius: 10px;
+    padding: 20px 30px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    color: #ffffff;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.reg span{
+    color: #333333;
+    background-color: #eeeeee;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-right: 15px;
+    display: inline-block;
+    width: 100px;
 }
 
 .back_btn {
@@ -176,12 +201,57 @@ select.inputarea {
     margin: 30px auto 0;
     padding: 10px 50px;
     border-radius: 10px;
-    background-color: #97d4d9;
+    background-color: #888888;
     color: #ffffff;
 }
 
-.back_btn:hover {
+/* ホバー共通 */
+.submit_btn:hover,
+.item:hover,.back_btn:hover {
     opacity: 0.8;
+}
+
+/* form色選択（デフォルト値があるのでCSSの位置はここ） */
+input[type="radio"] {
+    display: none;
+}
+
+.pink {
+    background-color: #ff7675;
+}
+
+.yellow {
+    background-color: #ff9f43;
+}
+
+.green {
+    background-color: #00b894;
+}
+
+.blue {
+    background-color: #0984e3;
+}
+
+.purple {
+    background-color: #7158e2;
+}
+
+.gray {
+    background-color: #636e72;
+}
+
+.color {
+    border-radius: 5px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.colors {
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
 }
 
 /* --------------------
@@ -191,6 +261,19 @@ select.inputarea {
 
     h1 {
         font-size: 21px;
+    }
+
+    .add_btn {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        font-size: 12px;
+    }
+
+    .input_item {
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 5px;
     }
 
 }
