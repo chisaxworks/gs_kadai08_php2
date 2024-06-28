@@ -21,3 +21,11 @@ $(".color").on("click", function () {
     $('.color').css('opacity', '0.6');
     $(this).css('opacity', '1.0');
 });
+
+//itemクリックしたときの動作
+$(".item").on("click", function () {
+    	
+    $(this).find('.ogpImg').toggle();
+    $(this).find('.details').toggle();
+
+});

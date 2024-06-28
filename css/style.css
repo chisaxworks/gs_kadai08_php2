@@ -121,6 +121,10 @@ select.inputarea {
     padding: 10px 50px;
 }
 
+.submit_btn:hover {
+    background-color: #999999;
+}
+
 /* 表示エリア */
 .display_wrap h2{
     text-align: center;
@@ -142,11 +146,8 @@ select.inputarea {
     flex-direction: column;
     row-gap: 10px;
     width: 320px;
-    height: 160px;
+    height: 230px;
     color: #ffffff;
-
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .sname {
@@ -154,17 +155,49 @@ select.inputarea {
     padding-bottom: 10px;
 }
 
-.icon_wrap{
-    display: flex;
-    column-gap: 5px;
+img.ogpImg{
+    object-fit: contain;
+    /* width: 280px; */
+    height: 147px;
+    background-image: url(../img/noimage.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 
-.paytype, .mailtype {
+.details {
+    display: none;
+}
+
+/* New */
+.details p {
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+.details span{
     color: #333333;
     background-color: #eeeeee;
+    padding: 5px;
+    margin-right: 8px;
+    display: inline-block;
+    width: 57px;
+    font-size: 11px;
+}
+
+.open_btn {
+    display: block;
+    width: 100%;
+    margin: 10px auto 0;
+    padding: 10px;
+    background-color: #333333;
+    color: #ffffff;
+    text-align: center;
     font-size: 12px;
-    border-radius: 5px;
-    padding: 5px 10px;
+}
+
+.open_btn:hover {
+    background-color: #444444;
 }
 
 /* 確認画面 */
@@ -205,10 +238,8 @@ select.inputarea {
     color: #ffffff;
 }
 
-/* ホバー共通 */
-.submit_btn:hover,
-.item:hover,.back_btn:hover {
-    opacity: 0.8;
+.back_btn:hover {
+    opacity: #999999;
 }
 
 /* form色選択（デフォルト値があるのでCSSの位置はここ） */
