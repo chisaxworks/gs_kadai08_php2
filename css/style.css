@@ -170,12 +170,12 @@ img.ogpImg{
 }
 
 /* New */
-.details p {
+.details p, .details2 p {
     margin-bottom: 5px;
     font-size: 12px;
 }
 
-.details span{
+.details span, .details2 span{
     color: #333333;
     background-color: #eeeeee;
     padding: 5px;

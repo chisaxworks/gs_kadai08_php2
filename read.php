@@ -2,7 +2,7 @@
 //1.  DB接続します
 try {
     //ID:'root', Password: xamppは 空白 ''
-    $pdo = new PDO('mysql:dbname=chisaxworks_gs_kadai_php;charset=utf8;host=mysql635.db.sakura.ne.jp','chisaxworks','gs_kadai08_php2');
+    $pdo = new PDO('mysql:dbname=gs_kadai_php;charset=utf8;host=localhost','root','');
 } catch (PDOException $e) {
 exit('DBConnectError:'.$e->getMessage());
 }
@@ -21,26 +21,23 @@ if ($status==false) {
 }else{
     //whileで1件ずつ取得
     while( $result = $stmt->fetch(PDO::FETCH_ASSOC)){
-        $view .= '<a class="item ';
+        $view .= '<div class="item ';
         $view .= $result['color'];
-        $view .= '" target="_blank" href="';
-        $view .= $result['url'];
         $view .= '">';
         $view .= '<p class="sname">';
         $view .= $result['sname'];
         $view .= '</p>';
-        $view .= '<p class="normal">';
+        $view .= '<div class="details2"><p><span>プラン</span>';
         $view .= $result['plan'];
-        $view .= '</p>';
-        $view .= '<div class="icon_wrap"><div class="paytype">';
-        $view .= $result['payment'];
-        $view .= '</div><div class="mailtype">';
+        $view .= '</p><p><span>メール</span>';
         $view .= $result['mail'];
-        $view .= '</div></div>';
-        $view .= '<p class="normal">';
+        $view .= '</p><p><span>支払有無</span>';
+        $view .= $result['payment'];
+        $view .= '</p><p><span>補足</span>';
         $view .= $result['note'];
-        $view .= '</p>';
-        $view .= '</a>';
+        $view .= '</p><a href="';
+        $view .= $result['url'];
+        $view .= '" target="_blank" class="open_btn">開く</a></div></div>';
     }
 
 }
